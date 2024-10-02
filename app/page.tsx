@@ -1,15 +1,16 @@
 import { Separator } from "@radix-ui/react-context-menu";
-import { Card, CardContent, CardHeader, CardTitle } from "./_components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "./_components/ui/card";
 import { AddTodo } from "./add-todo";
 import { PrismaClient } from "@prisma/client";
 
-
-
-
-
 export default async function Home() {
-  const prisma = new PrismaClient()
-  const todos = await prisma.todos.findMany()
+  const prisma = new PrismaClient();
+  const todos = await prisma.todos.findMany();
 
   return (
     <div>
